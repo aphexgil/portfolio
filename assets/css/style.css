@@ -1,0 +1,255 @@
+
+/* Sets font to cursive, aligns font center, clears any browser default margins or padding. */
+*{
+    font-family: cursive;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Chain-link background */
+html{
+    background-image: url("../images/bgwire.jpg");
+    background-repeat: repeat;
+}
+
+/* Font sizing */
+h1{
+    font-size: 77px;
+}
+
+/* My name in the bio section dynamically resizes to fix flexbox. */
+h2{
+    font-size: 3vw;
+}
+h3{
+    font-size: 44px;
+}
+
+/* Align bio section to the left */
+p{
+    font-size: 2vw;
+    text-align: left;
+}
+
+/* */
+header{
+    width: 100%;
+    background-color: aqua;
+    top: 0;
+    z-index: 2;
+}
+
+nav{
+    display: flex;
+    width: 90%;
+    margin: 0px auto 10px auto;
+}
+
+nav a{
+    flex: 1 1;
+    font-size: 33px;
+}
+
+main{
+    margin-top: 70px;
+}
+
+
+.chunk{
+    margin:  7vw auto 0px auto;
+    width: 90%;
+}
+
+.headline{
+    display: inline-block;
+    text-align: center;
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+
+#about-holder{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+aside{
+    flex: 8;
+}
+
+#headshot{
+    width: 90%;
+    display: block;
+    display: block;
+    margin: 0px auto 20px auto;
+}
+
+#about-box{
+    background-color: aqua;
+    flex: 9;
+    margin: 0px auto;
+    padding: min(66px,4vw);
+}
+
+#card-holder{
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    align-items:stretch;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.card{
+    background-color: aqua;
+    flex: 1 1 350px;
+    width: 90%;
+    max-width: 500px;
+    min-height: 90%;
+    padding: 30px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card-pic-holder{
+    width: 100%;
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-pic{
+    width: 100%;
+    flex: 0 1;
+}
+
+.card-name{
+    flex: 0 1;
+    justify-self: flex-end;
+}
+
+.card:hover{
+    filter: drop-shadow(5px 5px 5px white) saturate(4);
+}
+
+#sconce{
+    max-width: none;
+    flex: 2 1 600px;
+}
+
+#contact-holder{
+    display: flex;
+    flex-direction: row;
+    margin: 0px auto;
+}
+
+#contact-box{
+    background-color: aqua;
+    flex: 0 1 600px;
+    font-size: 33px;
+    padding: 33px;
+    margin: 0px auto;
+}
+
+ul{
+    display: inline-block;
+    margin: 0px auto;
+}
+
+li{
+    text-align: left;
+}
+
+li::marker{
+    content: '☥  ';
+}
+
+#squiggle{
+    width: min(700px, 80vw);
+    margin: min(200px, 40vh) auto 20px auto;
+}
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+
+    .card{
+        flex: 1 1 250px;
+    }
+    /* h2{
+        font-size: 33px;
+    } */
+}
+  
+/* Large smartphones */
+@media screen and (max-width: 768px) {
+
+    #about-holder{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card{
+        flex: 1 1 300px;
+    }
+    h2{
+        font-size: 5.25vw;
+    }
+    p{
+        font-size: 3.5vw;
+    }
+    #contact-box{
+        font-size: 27px;
+    }
+    
+}
+
+
+/* Medium Smarphones */
+@media screen and (max-width: 576px) {
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 6vw;
+    }
+    p{
+        font-size: 4vw;
+    }
+    #contact-box{
+        font-size: 19px;
+    }
+}
+
+/* Smaller Smartphones */
+@media screen and (max-width: 375px) {
+    h1{
+        font-size: 49px;
+    }
+    nav a{
+        font-size: 22px;
+    }
+    #contact-box{
+        font-size: 14px;
+    }
+    p{
+        font-size: 4.5vw;
+    }
+}
+
+/* Folding Screens */
+@media screen and (max-width: 300px) {
+    h1{
+        font-size: 44px;
+    }
+    .card-name{
+        font-size: 33px;
+    }
+    #contact-box{
+        font-size: 13px;
+    }
+}
